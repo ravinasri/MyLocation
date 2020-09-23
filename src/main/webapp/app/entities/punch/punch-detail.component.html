@@ -1,0 +1,42 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="punch">
+            <h2><span jhiTranslate="myLocationApp.punch.detail.title">Punch</span> {{ punch.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="myLocationApp.punch.user">User</span></dt>
+                <dd>
+                    <span>{{ punch.user }}</span>
+                </dd>
+                <dt><span jhiTranslate="myLocationApp.punch.mylatitude">Mylatitude</span></dt>
+                <dd>
+                    <span>{{ punch.mylatitude }}</span>
+                </dd>
+                <dt><span jhiTranslate="myLocationApp.punch.myLongitude">My Longitude</span></dt>
+                <dd>
+                    <span>{{ punch.myLongitude }}</span>
+                </dd>
+                <dt><span jhiTranslate="myLocationApp.punch.punchtime">Punchtime</span></dt>
+                <dd>
+                    <span>{{ punch.punchtime }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/punch', punch.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

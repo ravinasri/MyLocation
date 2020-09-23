@@ -1,0 +1,33 @@
+{
+  "name": "Punch",
+  "fields": [
+    {
+      "fieldName": "user",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "mylatitude",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "myLongitude",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "punchtime",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20200923044846",
+  "entityTableName": "punch",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}
